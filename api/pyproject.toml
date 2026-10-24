@@ -1,0 +1,29 @@
+[project]
+name = "api"
+version = "0.1.0"
+description = "Decode AI API"
+readme = "README.md"
+authors = [
+    { email = "zeeshanrana2014@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "duckduckgo-search>=8.1.1",
+    "fastapi[standard]",
+    "httpx>=0.28.1",
+    "langchain>=1.4.7",
+    "langchain-ollama>=1.1.0",
+    "pydantic>=2.14.1",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "sqlmodel>=0.0.48",
+    "sse-starlette>=3.5.0",
+    "uvicorn",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
